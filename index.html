@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Galaxia Downloads</title>
+
+<style>
+body{
+  margin:0;
+  background:#0a0d18;
+  color:white;
+  font-family:Segoe UI,system-ui;
+}
+header{
+  padding:40px;
+  text-align:center;
+  background:linear-gradient(120deg,#4c6bff,#00d4ff);
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,260px);
+  gap:24px;
+  padding:40px;
+}
+.card{
+  background:#141c3f;
+  border-radius:18px;
+  padding:20px;
+  text-align:center;
+}
+.card button{
+  margin-top:14px;
+  padding:10px 16px;
+  border:none;
+  border-radius:10px;
+  background:#4c6bff;
+  color:white;
+  cursor:pointer;
+}
+.small{opacity:.7;font-size:13px}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>GALAXIA INSTALLER</h1>
+  <p>Download apps without exposing source code</p>
+</header>
+
+<div class="grid">
+
+  <div class="card">
+    <h2>Galaxia OS</h2>
+    <p class="small">Windows build</p>
+    <button onclick="download('galaxia-win.zip')">Install</button>
+  </div>
+
+  <div class="card">
+    <h2>Galaxia OS</h2>
+    <p class="small">Linux build</p>
+    <button onclick="download('galaxia-linux.zip')">Install</button>
+  </div>
+
+  <div class="card">
+    <h2>Game Pack</h2>
+    <p class="small">30 Web Games</p>
+    <button onclick="download('games-pack.zip')">Install</button>
+  </div>
+
+</div>
+
+<script>
+function download(file){
+  window.location.href =
+    "../packages/" + file;
+}
+</script>
+
+</body>
+</html>
